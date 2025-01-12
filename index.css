@@ -1,3 +1,6 @@
-#heading1 {
-  color: brown;
+#parent1 {
+  background-color: aliceblue;
+}
+#parent2 {
+  background-color: azure;
 }
