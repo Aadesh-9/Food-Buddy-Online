@@ -4,7 +4,9 @@
   "description": "Online food delivery platform",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "npx parcel index.html",
+    "build": "npx parcel index.html"
   },
   "repository": {
     "type": "git",
