@@ -1,0 +1,28 @@
+{
+  "name": "food-buddy-online",
+  "version": "1.0.0",
+  "description": "Online food delivery platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aadesh-9/Food-Buddy-Online.git"
+  },
+  "author": "Aadesh Wasamkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aadesh-9/Food-Buddy-Online/issues"
+  },
+  "homepage": "https://github.com/Aadesh-9/Food-Buddy-Online#readme",
+  "dependencies": {
+    "browserslist": "^4.24.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  }
+}
