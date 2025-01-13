@@ -29,21 +29,19 @@ a {
   width: 100%;
   height: 30px;
   margin-left: 35%;
-  margin-right: 35%;
-  display: flex;
-  justify-content: flex-start;
 }
 
 .search-space {
+  padding: 6px;
   width: 27%;
   border: 1px solid black;
 }
 
 .search-button {
   cursor: pointer;
-  margin-left: 3px;
+  margin-left: 5px;
   border: 1px solid black;
-  padding: 4px;
+  padding: 6px;
 }
 
 .res-cards-container {
@@ -52,17 +50,18 @@ a {
   flex-wrap: wrap;
 }
 .res-logo {
-  width: 190px;
+  width: 210;
   height: 140px;
 }
 
 .card {
   margin: 2px;
-  width: 200px;
+  width: 220px;
   height: 350px;
   padding: 7px;
 }
 
 .card:hover {
   border: 1px solid black;
+  cursor: pointer;
 }
