@@ -30,6 +30,16 @@ syntax - const [state,useState] = useState([])
 state - current state value
 setState - a function to update state , when called it triggers rerendering of the component
 
+useState() returns an array
+const [state,useState] = useState([]) -- this is array destructuring
+const arr = useState()
+
+const [state,useState] = arr ;
+const state = arr[0] ;
+const setState = arr[1] ;
+
+it is all valid
+
 when we call use state it gives us a state variable , we receive it using array
 example - let [listOfRestaurants] = useState() ;
 whatever we pass to useState() acts as a default value for the state variabel - example - let [listOfRestaurants] = useState([]) ;
@@ -42,3 +52,16 @@ re-rendering - process of updating and re-executing component to reflect changes
 in js we can do this but it requires very much code , react made it easy , react keeps UI layer in sync with data layer , as soon as data layer update UI will update, it updates by re-rendering , it does this in fast optimized way with very less code
 react mmakes dom operations super fast
 useEffect()
+
+virtual dom is not an actual dom - actual dom is the html tags
+virtual dom is a representaion of actual dom
+react create object from jsx code
+
+diff algorithm - finds out difference between new virtual dom and new virtual dom --> it then updates actual dom
+
+The React Fiber algorithm is a modern reconciliation engine introduced by React to optimize and improve the rendering process, especially for large and complex applications.
+Fiber is React's mechanism for determining what changes need to be made to the DOM when the application’s state or props change.
+A fiber is a JavaScript object that represents a React component and its state.
+Each fiber node corresponds to a React element in the virtual DOM and contains details such as the component type, props, and state.
+
+Reconciliation in React is the process by which React determines how to update the DOM efficiently in response to changes in state or props. It involves comparing the new virtual DOM tree (created based on the updated state or props) with the previous virtual DOM tree and determining the minimal set of changes required to update the real DOM.
