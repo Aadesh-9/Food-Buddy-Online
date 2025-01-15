@@ -1,0 +1,1110 @@
+const resList7 = [
+  {
+    info: {
+      id: "448341",
+      name: "The Burger",
+      cloudinaryImageId: "t5w6b7wzn6kyzwmktsrf",
+      locality: "Indira Shankar Nagari",
+      areaName: "Kothrud",
+      costForTwo: "₹450 for two",
+      cuisines: ["Fast Food", "Italian", "Snacks"],
+      avgRating: 2.1,
+      parentId: "205968",
+      avgRatingString: "2.1",
+      totalRatingsString: "25",
+      sla: {
+        deliveryTime: 29,
+        lastMileTravel: 3.9,
+        serviceability: "SERVICEABLE",
+        slaString: "25-30 mins",
+        lastMileTravelString: "3.9 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 05:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "10% OFF",
+        subHeader: "UPTO ₹40",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/the-burger-indira-shankar-nagari-kothrud-rest448341",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "952850",
+      name: "Grilly Sandwich",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/4/57b07218-3239-4cbe-9bad-a4fc29c023f9_952850.jpg",
+      locality: "Ramkrishna Hari Building",
+      areaName: "Kothrud",
+      costForTwo: "₹198 for two",
+      cuisines: ["sandwich", "Grill"],
+      avgRating: 3.9,
+      veg: true,
+      parentId: "558044",
+      avgRatingString: "3.9",
+      totalRatingsString: "6",
+      sla: {
+        deliveryTime: 34,
+        lastMileTravel: 5,
+        serviceability: "SERVICEABLE",
+        slaString: "30-35 mins",
+        lastMileTravelString: "5.0 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 03:00:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "50% OFF",
+        subHeader: "UPTO ₹100",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      isNewlyOnboarded: true,
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/grilly-sandwich-ramkrishna-hari-building-kothrud-rest952850",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "721027",
+      name: "Pizzawale Bhaiya",
+      cloudinaryImageId: "5e1b3ed77fb627c10faa3e0be092712b",
+      locality: "Karve Road",
+      areaName: "Kothrud",
+      costForTwo: "₹199 for two",
+      cuisines: ["Fast Food"],
+      avgRating: 4.1,
+      parentId: "282240",
+      avgRatingString: "4.1",
+      totalRatingsString: "16",
+      sla: {
+        deliveryTime: 39,
+        lastMileTravel: 4.2,
+        serviceability: "SERVICEABLE",
+        slaString: "35-40 mins",
+        lastMileTravelString: "4.2 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-22 00:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "10% OFF",
+        subHeader: "UPTO ₹40",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/pizzawale-bhaiya-karve-road-kothrud-rest721027",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "420804",
+      name: "Hotel Village",
+      cloudinaryImageId: "zhatyxlijxf1aadgpmtn",
+      locality: "Opposite Swami Narayan Mandir",
+      areaName: "Bibwewadi",
+      costForTwo: "₹200 for two",
+      cuisines: ["Indian", "Chinese", "Tandoor", "Biryani", "North Indian"],
+      avgRating: 3.8,
+      parentId: "103331",
+      avgRatingString: "3.8",
+      totalRatingsString: "21",
+      sla: {
+        deliveryTime: 39,
+        lastMileTravel: 7.4,
+        serviceability: "SERVICEABLE",
+        slaString: "35-40 mins",
+        lastMileTravelString: "7.4 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 02:30:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "20% OFF",
+        subHeader: "UPTO ₹50",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/hotel-village-opposite-swami-narayan-mandir-bibwewadi-rest420804",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "950096",
+      name: "Revus Foods",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/30/16247a6a-6bd1-42c5-a435-87d3054da411_950096.jpg",
+      locality: " Sai baba temple",
+      areaName: "Sai baba temple",
+      costForTwo: "₹149 for two",
+      cuisines: ["Snacks", "Home Food", "Fast Food"],
+      avgRating: 3.6,
+      parentId: "556725",
+      avgRatingString: "3.6",
+      totalRatingsString: "17",
+      sla: {
+        deliveryTime: 34,
+        lastMileTravel: 4.3,
+        serviceability: "SERVICEABLE",
+        slaString: "30-35 mins",
+        lastMileTravelString: "4.3 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 08:30:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "60% OFF",
+        subHeader: "ABOVE ₹159",
+        discountTag: "FLAT DEAL",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      isNewlyOnboarded: true,
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/revus-foods-sai-baba-temple-rest950096",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "968671",
+      name: "Annapurna Snacks Center",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/5/1059c17c-adf7-46f7-a8c0-3318647d9f2f_968671.jpg",
+      locality: "PANDURANG NGR ",
+      areaName: "Bibwewadi",
+      costForTwo: "₹200 for two",
+      cuisines: ["Fast Food"],
+      veg: true,
+      parentId: "301964",
+      avgRatingString: "NEW",
+      sla: {
+        deliveryTime: 35,
+        lastMileTravel: 9.9,
+        serviceability: "SERVICEABLE",
+        slaString: "35-40 mins",
+        lastMileTravelString: "9.9 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 02:30:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      isNewlyOnboarded: true,
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/annapurna-snacks-center-pandurang-ngr-bibwewadi-rest968671",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "375337",
+      name: "Hotel Buff Special",
+      cloudinaryImageId: "gway52ir7smmrlft3ywo",
+      locality: "Bhawani Peth",
+      areaName: "Camp",
+      costForTwo: "₹300 for two",
+      cuisines: ["North Indian"],
+      avgRating: 3.8,
+      parentId: "98452",
+      avgRatingString: "3.8",
+      totalRatingsString: "88",
+      sla: {
+        deliveryTime: 39,
+        lastMileTravel: 11.5,
+        serviceability: "SERVICEABLE",
+        slaString: "35-40 mins",
+        lastMileTravelString: "11.5 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 01:33:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "50% OFF",
+        discountTag: "FLAT DEAL",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/hotel-buff-special-bhawani-peth-camp-rest375337",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "675531",
+      name: "The Pizza Nut",
+      cloudinaryImageId: "dfcf6d9fbd77b2ff1006ccfb40e2ca55",
+      locality: "Karve Road",
+      areaName: "Kothrud",
+      costForTwo: "₹400 for two",
+      cuisines: ["Pizzas", "Fast Food", "Burgers", "Snacks", "Beverages"],
+      avgRating: 3.6,
+      parentId: "281139",
+      avgRatingString: "3.6",
+      totalRatingsString: "5",
+      sla: {
+        deliveryTime: 35,
+        lastMileTravel: 4.2,
+        serviceability: "SERVICEABLE",
+        slaString: "35-40 mins",
+        lastMileTravelString: "4.2 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-22 00:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "20% OFF",
+        subHeader: "UPTO ₹50",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/the-pizza-nut-karve-road-kothrud-rest675531",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "999423",
+      name: "Cafe Ricoco",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/28/990d1f6f-a404-44c6-a204-1f62a73177c1_999423.jpg",
+      locality: "Karve Road",
+      areaName: "Kothrud",
+      costForTwo: "₹200 for two",
+      cuisines: ["Fast Food"],
+      parentId: "340518",
+      avgRatingString: "NEW",
+      sla: {
+        deliveryTime: 35,
+        lastMileTravel: 6.7,
+        serviceability: "SERVICEABLE",
+        slaString: "35-40 mins",
+        lastMileTravelString: "6.7 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 05:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "40% OFF",
+        subHeader: "UPTO ₹80",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      isNewlyOnboarded: true,
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/cafe-ricoco-karve-road-kothrud-rest999423",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "672216",
+      name: "Vardhaman Pizza House",
+      cloudinaryImageId: "f378b354f6f4beb207d8794023852db3",
+      locality: "Vidyanagari",
+      areaName: "Bibwewadi",
+      costForTwo: "₹300 for two",
+      cuisines: ["Pizzas", "Beverages", "Snacks"],
+      avgRating: 4.5,
+      veg: true,
+      parentId: "402651",
+      avgRatingString: "4.5",
+      totalRatingsString: "13",
+      sla: {
+        deliveryTime: 37,
+        lastMileTravel: 9.7,
+        serviceability: "SERVICEABLE",
+        slaString: "35-40 mins",
+        lastMileTravelString: "9.7 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 02:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "20% OFF",
+        subHeader: "UPTO ₹50",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/vardhaman-pizza-house-vidyanagari-bibwewadi-rest672216",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "886891",
+      name: "A 1 Fast Food",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2024/5/16/6e63d321-47da-4e1d-97a8-87f1c4e2188f_886891.jpg",
+      locality: "Shriram Nagar,",
+      areaName: "Bibwewadi",
+      costForTwo: "₹200 for two",
+      cuisines: ["Fast Food", "Cafe"],
+      avgRating: 3.8,
+      parentId: "461440",
+      avgRatingString: "3.8",
+      totalRatingsString: "19",
+      sla: {
+        deliveryTime: 38,
+        lastMileTravel: 9.6,
+        serviceability: "SERVICEABLE",
+        slaString: "35-40 mins",
+        lastMileTravelString: "9.6 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 04:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/a-1-fast-food-shriram-nagar-bibwewadi-rest886891",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "364465",
+      name: "Bambir House",
+      cloudinaryImageId: "acb683425dd59195bbdb1e3bdddc32d3",
+      locality: "Shankar Kalat Nagar ",
+      areaName: "Wakad",
+      costForTwo: "₹250 for two",
+      cuisines: ["Indian", "Biryani"],
+      avgRating: 4.2,
+      parentId: "40962",
+      avgRatingString: "4.2",
+      totalRatingsString: "547",
+      sla: {
+        deliveryTime: 62,
+        lastMileTravel: 14.9,
+        serviceability: "SERVICEABLE",
+        slaString: "60-65 mins",
+        lastMileTravelString: "14.9 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 07:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "15% OFF",
+        subHeader: "ABOVE ₹1000",
+        discountTag: "FLAT DEAL",
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/bambir-house-shankar-kalat-nagar-wakad-rest364465",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "482940",
+      name: "Pizza Castles",
+      cloudinaryImageId: "amczr9ver3pslvspmt02",
+      locality: "Indrayani Nagar",
+      areaName: "Bibwewadi",
+      costForTwo: "₹200 for two",
+      cuisines: ["Pizzas", "Fast Food", "Italian", "American", "Burgers"],
+      avgRating: 3.9,
+      parentId: "290002",
+      avgRatingString: "3.9",
+      totalRatingsString: "123",
+      sla: {
+        deliveryTime: 43,
+        lastMileTravel: 9,
+        serviceability: "SERVICEABLE",
+        slaString: "40-45 mins",
+        lastMileTravelString: "9.0 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 02:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/pizza-castles-indrayani-nagar-bibwewadi-rest482940",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "400434",
+      name: "Kamath Non Veg",
+      cloudinaryImageId: "asjyazwaekf04iyvp64f",
+      locality: " Bafna Petrol Pump",
+      areaName: "Shukrawar Peth",
+      costForTwo: "₹300 for two",
+      cuisines: ["North Indian", "Chinese"],
+      avgRating: 3.6,
+      parentId: "230795",
+      avgRatingString: "3.6",
+      totalRatingsString: "340",
+      sla: {
+        deliveryTime: 52,
+        lastMileTravel: 9.4,
+        serviceability: "SERVICEABLE",
+        slaString: "50-55 mins",
+        lastMileTravelString: "9.4 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 03:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/kamath-non-veg-bafna-petrol-pump-shukrawar-peth-rest400434",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "400429",
+      name: "Punjabi Non Veg",
+      cloudinaryImageId: "yhtsearvixal9enza6zm",
+      locality: "Near- Bafna Petrol Pump",
+      areaName: "Shukrawar Peth",
+      costForTwo: "₹300 for two",
+      cuisines: ["North Indian", "Chinese", "Biryani"],
+      avgRating: 3.4,
+      parentId: "162403",
+      avgRatingString: "3.4",
+      totalRatingsString: "111",
+      sla: {
+        deliveryTime: 49,
+        lastMileTravel: 9.4,
+        serviceability: "SERVICEABLE",
+        slaString: "45-50 mins",
+        lastMileTravelString: "9.4 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-01-16 03:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      orderabilityCommunication: {
+        title: {},
+        subTitle: {},
+        message: {},
+        customIcon: {},
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-c7d7594b-3eec-43fb-bed6-cffe19774871",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/pune/punjabi-non-veg-near-bafna-petrol-pump-shukrawar-peth-rest400429",
+      text: "RESTAURANT_MENU",
+      type: "WEBLINK",
+    },
+    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+];
+
+export default resList7;
