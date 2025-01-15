@@ -15,6 +15,17 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [count, setCount] = useState(0);
 
+  const mockData = [
+    resList1,
+    resList2,
+    resList3,
+    resList4,
+    resList5,
+    resList6,
+    resList7,
+    resList8,
+  ];
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -22,11 +33,19 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(RESTAURANT_API);
     const jsonData = await data.json();
-    console.log(jsonData);
     setListOfRestaurants(
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
+  };
+
+  const handleLoadMore = () => {
+    if (count < mockData.length) {
+      setListOfRestaurants((prevList) => [...prevList, ...mockData[count]]);
+      setCount((prevCount) => prevCount + 1);
+    } else {
+      setListOfRestaurants((prevList) => [...prevList, ...mockData[3]]);
+    }
   };
 
   return (
@@ -35,8 +54,14 @@ const Body = () => {
       <button
         onClick={() => {
           const filteredList = listOfRestaurants.filter((res) => {
-            return res.info.avgRating > 4.1;
+            return res.info.avgRating > 4.3;
           });
+          filteredList.sort((a, b) => {
+            const ratingA = a.info?.avgRating || 0;
+            const ratingB = b.info?.avgRating || 0;
+            return ratingB - ratingA;
+          });
+
           setListOfRestaurants(filteredList);
         }}
         className="top-rated-restaurants-button"
@@ -50,31 +75,7 @@ const Body = () => {
       </div>
       <button
         onClick={() => {
-          if (count == 0) {
-            setCount((prevCount) => prevCount + 1);
-            setListOfRestaurants((prevList) => [...prevList, ...resList1]);
-          } else if (count == 1) {
-            setCount((prevCount) => prevCount + 1);
-            setListOfRestaurants((prevList) => [...prevList, ...resList2]);
-          } else if (count == 2) {
-            setCount((prevCount) => prevCount + 1);
-            setListOfRestaurants((prevList) => [...prevList, ...resList3]);
-          } else if (count == 3) {
-            setCount((prevCount) => prevCount + 1);
-            setListOfRestaurants((prevList) => [...prevList, ...resList4]);
-          } else if (count == 4) {
-            setCount((prevCount) => prevCount + 1);
-            setListOfRestaurants((prevList) => [...prevList, ...resList5]);
-          } else if (count == 5) {
-            setCount((prevCount) => prevCount + 1);
-            setListOfRestaurants((prevList) => [...prevList, ...resList6]);
-          } else if (count == 6) {
-            setCount((prevCount) => prevCount + 1);
-            setListOfRestaurants((prevList) => [...prevList, ...resList7]);
-          } else {
-            setCount((prevCount) => prevCount + 1);
-            setListOfRestaurants((prevList) => [...prevList, ...resList8]);
-          }
+          handleLoadMore();
         }}
         className="more-res-button"
       >
