@@ -1,3 +1,7 @@
+import { RESTAURANT_API } from "./utils/constants";
+import RestaurantCards from "./RestaurantsCards";
+import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 import resList1 from "./utils/mockData/mockData1";
 import resList2 from "./utils/mockData/mockData2";
 import resList3 from "./utils/mockData/mockData3";
@@ -7,9 +11,6 @@ import resList6 from "./utils/mockData/mockData6";
 import resList7 from "./utils/mockData/mockData7";
 import resList8 from "./utils/mockData/mockData8";
 import SearchBar from "./SearchBar";
-import { RESTAURANT_API } from "./utils/constants";
-import RestaurantCards from "./RestaurantsCards";
-import { useState, useEffect } from "react";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -48,7 +49,9 @@ const Body = () => {
     }
   };
 
-  return (
+  return listOfRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <SearchBar />
       <button

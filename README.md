@@ -75,4 +75,6 @@ monolith architecture
 microservices architecture
 useEffect()
 promise n - async await
-optional chaining
+optional chaining --> rendering based on output of a condition
+
+conditional rendering

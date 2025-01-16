@@ -3,11 +3,13 @@ import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import Footer from "./src/components/Footer";
+import SearchBar from "./src/components/SearchBar";
 
 const AppLayout = () => {
   return (
     <div>
       <Header />
+      <SearchBar />
       <Body />
       <Footer />
     </div>

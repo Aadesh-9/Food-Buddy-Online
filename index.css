@@ -50,30 +50,81 @@ a {
   flex-wrap: wrap;
 }
 .res-logo {
-  width: 210;
+  width: 15.5vw;
+  height: 150px;
+  margin: 5px;
+}
+.res-logo:hover {
+  width: 14.5vw;
   height: 140px;
 }
 
 .card {
-  margin: 2px;
-  width: 220px;
-  height: 350px;
+  margin: 1%;
+  width: 16vw;
+  height: 7%;
   padding: 7px;
 }
 
 .card:hover {
   border: 1px solid black;
+  border-radius: 2%;
+  width: 15.5vw;
+  height: 6%;
   cursor: pointer;
 }
 
 .top-rated-restaurants-button {
   padding: 7px;
   margin: 10px;
+  margin-left: 2%;
   cursor: pointer;
+}
+
+.top-rated-restaurants-button:hover {
+  padding: 12px;
 }
 
 .more-res-button {
   padding: 7px;
   margin: 10px;
   cursor: pointer;
+}
+
+.shimmer-container {
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  margin: 1%;
+  width: 16vw;
+  height: 19vw;
+  padding: 7px;
+  background-color: #f0f0f0;
+}
+
+.shimmer-line1 {
+  position: relative;
+  top: 60%;
+  background-color: #181818;
+  width: 12vw;
+  height: 0.7vw;
+}
+
+.shimmer-line2 {
+  position: relative;
+  top: 65%;
+  background-color: #181818;
+  width: 10vw;
+  height: 0.7vw;
+}
+
+.shimmer-line3 {
+  position: relative;
+  top: 70%;
+  background-color: #181818;
+  width: 8vw;
+  height: 0.7vw;
 }
