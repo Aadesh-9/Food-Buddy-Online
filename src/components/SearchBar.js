@@ -1,6 +1,10 @@
 const SearchBar = (props) => {
-  const { searchText, setSearchText, listOfRestaurants, setListOfRestaurants } =
-    props;
+  const {
+    searchText,
+    setSearchText,
+    listOfRestaurants,
+    setFilteredListOfRestaurants,
+  } = props;
   return (
     <div className="search-container">
       <input
@@ -19,8 +23,7 @@ const SearchBar = (props) => {
               .toLowerCase()
               .includes(searchText.toLowerCase());
           });
-          console.log(filteredList);
-          setListOfRestaurants(filteredList);
+          setFilteredListOfRestaurants(filteredList);
         }}
         className="search-button"
       >

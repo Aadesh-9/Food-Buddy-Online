@@ -12,7 +12,14 @@ import resList7 from "./utils/mockData/mockData7";
 import resList8 from "./utils/mockData/mockData8";
 
 const Body = (props) => {
-  const { listOfRestaurants, setListOfRestaurants, count, setCount } = props;
+  const {
+    listOfRestaurants,
+    setListOfRestaurants,
+    count,
+    setCount,
+    filteredListOfRestaurants,
+    setFilteredListOfRestaurants,
+  } = props;
 
   const mockData = [
     resList1,
@@ -36,14 +43,24 @@ const Body = (props) => {
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
+
+    setFilteredListOfRestaurants(
+      jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
   };
 
   const handleLoadMore = () => {
     if (count < mockData.length) {
       setListOfRestaurants((prevList) => [...prevList, ...mockData[count]]);
+      setFilteredListOfRestaurants((prevList) => [
+        ...prevList,
+        ...mockData[count],
+      ]);
       setCount((prevCount) => prevCount + 1);
     } else {
       setListOfRestaurants((prevList) => [...prevList, ...mockData[3]]);
+      setFilteredListOfRestaurants((prevList) => [...prevList, ...mockData[3]]);
     }
   };
 
@@ -62,14 +79,14 @@ const Body = (props) => {
             return ratingB - ratingA;
           });
 
-          setListOfRestaurants(filteredList);
+          setFilteredListOfRestaurants(filteredList);
         }}
         className="top-rated-restaurants-button"
       >
         Top Rated Restaurants
       </button>
       <div className="res-cards-container">
-        {listOfRestaurants.map((restaurant) => (
+        {filteredListOfRestaurants.map((restaurant) => (
           <RestaurantCards key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>

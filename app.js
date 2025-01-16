@@ -8,7 +8,9 @@ import { useState } from "react";
 
 const AppLayout = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
-
+  const [filteredListOfRestaurants, setFilteredListOfRestaurants] = useState(
+    []
+  );
   const [searchText, setSearchText] = useState("");
   const [count, setCount] = useState(0);
   return (
@@ -19,12 +21,16 @@ const AppLayout = () => {
         setListOfRestaurants={setListOfRestaurants}
         searchText={searchText}
         setSearchText={setSearchText}
+        filteredListOfRestaurants={filteredListOfRestaurants}
+        setFilteredListOfRestaurants={setFilteredListOfRestaurants}
       />
       <Body
         listOfRestaurants={listOfRestaurants}
         setListOfRestaurants={setListOfRestaurants}
         count={count}
         setCount={setCount}
+        filteredListOfRestaurants={filteredListOfRestaurants}
+        setFilteredListOfRestaurants={setFilteredListOfRestaurants}
       />
       <Footer />
     </div>
