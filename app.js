@@ -4,13 +4,28 @@ import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import Footer from "./src/components/Footer";
 import SearchBar from "./src/components/SearchBar";
+import { useState } from "react";
 
 const AppLayout = () => {
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
+
+  const [searchText, setSearchText] = useState("");
+  const [count, setCount] = useState(0);
   return (
     <div>
       <Header />
-      <SearchBar />
-      <Body />
+      <SearchBar
+        listOfRestaurants={listOfRestaurants}
+        setListOfRestaurants={setListOfRestaurants}
+        searchText={searchText}
+        setSearchText={setSearchText}
+      />
+      <Body
+        listOfRestaurants={listOfRestaurants}
+        setListOfRestaurants={setListOfRestaurants}
+        count={count}
+        setCount={setCount}
+      />
       <Footer />
     </div>
   );
