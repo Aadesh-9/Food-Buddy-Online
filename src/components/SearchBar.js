@@ -5,6 +5,7 @@ const SearchBar = (props) => {
     listOfRestaurants,
     setFilteredListOfRestaurants,
   } = props;
+
   return (
     <div className="search-container">
       <input
@@ -14,6 +15,14 @@ const SearchBar = (props) => {
         value={searchText}
         onChange={(e) => {
           setSearchText(e.target.value);
+        }}
+        onKeyDown={() => {
+          const filteredList = listOfRestaurants.filter((res) => {
+            return res.info.name
+              .toLowerCase()
+              .includes(searchText.toLowerCase());
+          });
+          setFilteredListOfRestaurants(filteredList);
         }}
       />
       <button

@@ -38,16 +38,13 @@ const Body = (props) => {
 
   const fetchData = async () => {
     const data = await fetch(RESTAURANT_API);
-    const jsonData = await data.json();
-    setListOfRestaurants(
-      jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
+    const json = await data.json();
+    const jsonData =
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+    setListOfRestaurants(jsonData);
 
-    setFilteredListOfRestaurants(
-      jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
+    setFilteredListOfRestaurants(jsonData);
   };
 
   const handleLoadMore = () => {
