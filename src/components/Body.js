@@ -10,17 +10,17 @@ import resList5 from "./utils/mockData/mockData5";
 import resList6 from "./utils/mockData/mockData6";
 import resList7 from "./utils/mockData/mockData7";
 import resList8 from "./utils/mockData/mockData8";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const Body = (props) => {
-  const {
-    listOfRestaurants,
-    setListOfRestaurants,
-    count,
-    setCount,
-    filteredListOfRestaurants,
-    setFilteredListOfRestaurants,
-  } = props;
+const Body = () => {
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [filteredListOfRestaurants, setFilteredListOfRestaurants] = useState(
+    []
+  );
+  const [searchText, setSearchText] = useState("");
 
+  const [count, setCount] = useState(0);
   const mockData = [
     resList1,
     resList2,
@@ -65,6 +65,30 @@ const Body = (props) => {
     <Shimmer />
   ) : (
     <div className="body">
+      <div className="search-container">
+        <input
+          type="text"
+          className="search-space"
+          placeholder="Search Food Buddy Online"
+          value={searchText}
+          onChange={(e) => {
+            setSearchText(e.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            const filteredList = listOfRestaurants.filter((res) => {
+              return res.info.name
+                .toLowerCase()
+                .includes(searchText.toLowerCase());
+            });
+            setFilteredListOfRestaurants(filteredList);
+          }}
+          className="search-button"
+        >
+          Search
+        </button>
+      </div>
       <button
         onClick={() => {
           const filteredList = listOfRestaurants.filter((res) => {
@@ -84,7 +108,13 @@ const Body = (props) => {
       </button>
       <div className="res-cards-container">
         {filteredListOfRestaurants.map((restaurant) => (
-          <RestaurantCards key={restaurant.info.id} resData={restaurant} />
+          <Link
+            className="Link-tag"
+            key={restaurant.info.id}
+            to={"restaurants/" + restaurant.info.id}
+          >
+            <RestaurantCards resData={restaurant} />
+          </Link>
         ))}
       </div>
       <button

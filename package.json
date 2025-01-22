@@ -21,7 +21,8 @@
   "dependencies": {
     "browserslist": "^4.24.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.21.3"
   },
   "devDependencies": {
     "parcel": "^2.13.3",

@@ -6,3 +6,6 @@ export const RESTAURANT_IMAGE_URL =
 
 export const RESTAURANT_API =
   "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4874905&lng=73.790741&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+
+export const RESTAURANT_MENU_API =
+  "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4874905&lng=73.790741&restaurantId=";

@@ -1,14 +1,23 @@
 import { LOGO_URL } from "./utils/constants";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
       <div className="header-container">
         <img id="logo" src={LOGO_URL} />
-        <a id="home">Home</a>
-        <a>contact us</a>
-        <a>About us</a>
-        <a id="cart">cart</a>
+        <Link className="Link-tag" to="/" id="home">
+          Home
+        </Link>
+        <Link className="Link-tag" to="./contact">
+          contact us
+        </Link>
+        <Link className="Link-tag" to="./about">
+          About us
+        </Link>
+        <Link className="Link-tag" id="cart">
+          cart
+        </Link>
       </div>
     </header>
   );

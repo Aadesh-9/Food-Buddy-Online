@@ -50,26 +50,23 @@ a {
   flex-wrap: wrap;
 }
 .res-logo {
-  width: 15.5vw;
+  width: 14.3vw;
   height: 150px;
   margin: 5px;
 }
 .res-logo:hover {
-  width: 14.5vw;
-  height: 140px;
+  width: 14vw;
 }
 
 .card {
   margin: 1%;
-  width: 16vw;
+  width: 14.5vw;
   height: 7%;
   padding: 7px;
 }
 
 .card:hover {
-  border: 1px solid black;
-  border-radius: 2%;
-  width: 15.5vw;
+  width: 14.9vw;
   height: 6%;
   cursor: pointer;
 }
@@ -127,4 +124,8 @@ a {
   background-color: #181818;
   width: 8vw;
   height: 0.7vw;
+}
+
+.Link-tag {
+  text-decoration: none;
 }
