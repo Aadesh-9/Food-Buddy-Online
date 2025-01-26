@@ -1,17 +1,9 @@
-import { RESTAURANT_API } from "./utils/constants";
-import RestaurantCards from "./RestaurantsCards";
-import { useEffect } from "react";
-import Shimmer from "./Shimmer";
-import resList1 from "./utils/mockData/mockData1";
-import resList2 from "./utils/mockData/mockData2";
-import resList3 from "./utils/mockData/mockData3";
-import resList4 from "./utils/mockData/mockData4";
-import resList5 from "./utils/mockData/mockData5";
-import resList6 from "./utils/mockData/mockData6";
-import resList7 from "./utils/mockData/mockData7";
-import resList8 from "./utils/mockData/mockData8";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { RESTAURANT_API } from "../utils/constants";
+import RestaurantCards from "./RestaurantsCards";
+import Shimmer from "../utils/shimmerUI/Shimmer";
+import { MOCK_DATA } from "../utils/constants";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -21,16 +13,8 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const [count, setCount] = useState(0);
-  const mockData = [
-    resList1,
-    resList2,
-    resList3,
-    resList4,
-    resList5,
-    resList6,
-    resList7,
-    resList8,
-  ];
+
+  const mockData = MOCK_DATA;
 
   useEffect(() => {
     fetchData();
@@ -62,7 +46,9 @@ const Body = () => {
   };
 
   return listOfRestaurants.length === 0 ? (
-    <Shimmer />
+    <>
+      <Shimmer />
+    </>
   ) : (
     <div className="body">
       <div className="search-container">

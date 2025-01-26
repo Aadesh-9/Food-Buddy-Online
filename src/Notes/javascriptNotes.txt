@@ -1,0 +1,64 @@
+hoisting
+fetch()
+arrow Functions
+event loop
+callback function
+promise
+async await
+rest operator
+spread operator
+string literal
+oop
+map , filter , reduce
+
+    1. map
+    - Creates a new array by applying a function to each element of an existing array.
+    example ->
+        const numbers = [1, 2, 3, 4];
+        const squared = numbers.map(num => num * num);
+        console.log(squared); // Output: [1, 4, 9, 16]
+
+    Why Use key in React's map
+    - In React, when rendering lists, you must assign a key to each element.
+    - good practice is not to use index as a key (index parameter is present by default in map function)
+
+    Reasons
+        - Efficient Rendering
+            - React uses keys to identify which items have changed, been added, or removed.
+        Avoid Re-rendering
+            - Keys help React efficiently update and maintain the DOM.
+
+    2. filter
+    - Creates a new array with elements that satisfy a specific condition.
+    example ->
+        const numbers = [1, 2, 3, 4, 5];
+        const evenNumbers = numbers.filter(num => num % 2 === 0);
+        console.log(evenNumbers); // Output: [2, 4]
+
+
+    3. reduce
+    - Reduces an array to a single value by applying a function cumulatively.
+    example ->
+        const numbers = [1, 2, 3, 4];
+        const sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+        console.log(sum); // Output: 10
+        The reduce function starts with accumulator = 0.
+        It adds each current value to the accumulator and returns the total sum.
+
+
+optional chaining
+- It is a feature in JavaScript that allows you to access deeply nested object properties safely, without worrying about errors if some properties are undefined or null. If any part of the chain is undefined or null, it returns undefined instead of throwing an error.
+    - example
+        const user = {
+        name: "John",
+        profile: {
+            email: "john@example.com",
+        },
+        };
+
+        // Rendering safely using optional chaining
+        console.log(user?.profile?.email); // Output: "john@example.com"
+        console.log(user?.address?.city);  // Output: undefined
+
+        user?.profile?.email: Safely accesses email inside profile.
+        user?.address?.city: Does not throw an error if address is missing.

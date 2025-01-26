@@ -1,9 +1,14 @@
 const Footer = () => {
   return (
-    <div>
-      <p>Author</p>
-      <h4>By Aadesh Wasamkar</h4>
-    </div>
+    <footer>
+      <h1 className="copyright-symbol">&copy;</h1>
+      <h1
+        className="copyright-name
+          "
+      >
+        2025 Food-Buddy-Online.com
+      </h1>
+    </footer>
   );
 };
 

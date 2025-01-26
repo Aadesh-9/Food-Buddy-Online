@@ -1,0 +1,124 @@
+code execution of react 
+
+     1. JSX to React.createElement
+        - JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code within your JavaScript files.   When the JSX code is transpiled (usually by tools like Babel), it gets converted into JavaScript calls to `React.createElement`.
+        Example:
+            const element = <div className="container"><h1>Hello, World!</h1><p>Welcome to React.</p></div>;
+        This JSX code is transformed into a call to `React.createElement`:
+
+        const element = React.createElement(
+        'div',
+        { className: 'container' },
+        React.createElement('h1', null, 'Hello, World!'),
+        React.createElement('p', null, 'Welcome to React.')
+        );
+    
+
+     2. React.createElement to Object Representation
+        The `React.createElement` function creates a React element, which is a plain JavaScript object. This object contains information about the type of element, its properties (props), and any children it may have.
+
+        - Structure of the React Element Object:
+
+            javascript
+            {
+            type: 'div',
+            props: {
+                className: 'container',
+                children: [
+                {
+                    type: 'h1',
+                    props: {
+                    children: 'Hello, World!'
+                    }
+                },
+                {
+                    type: 'p',
+                    props: {
+                    children: 'Welcome to React.'
+                    }
+                }
+                ]
+            }
+            }
+    
+
+     3. Rendering the React Element to HTML
+        When you want to render this React element to the actual DOM, you typically use `ReactDOM.render()`. Here's a breakdown of what happens next.
+
+        Step 1: Call to `ReactDOM.render()`
+            When you call `ReactDOM.render(element, container)`, React takes the React element and begins the rendering process:
+
+            javascript
+            ReactDOM.render(element, document.getElementById('root'));
+        
+        Step 2: Creating Actual DOM Nodes
+
+            1. Creating the DOM Node:
+                - For each element type in the React element object, React calls `document.createElement()` to create a corresponding DOM node.
+
+                javascript
+                const createDOMNode = (virtualNode) => {
+                const node = document.createElement(virtualNode.type);
+                return node;
+                };
+
+                // Example for the 'div' element
+                const divNode = createDOMNode(element);
+        
+
+            2. Setting Attributes:
+                - React iterates through the props of the element and sets attributes on the created DOM node using properties like `className`, `id`, etc.
+
+                javascript
+                const setAttributes = (node, props) => {
+                for (const key in props) {
+                    if (key === 'className') {
+                    node.className = props[key]; // Sets the class attribute
+                    } else {
+                    node.setAttribute(key, props[key]); // Sets other attributes
+                    }
+                }
+                };
+
+                setAttributes(divNode, element.props); // Apply props to the div node
+        
+
+        Step 3: Appending Children
+
+            1. Recursion for Children:
+                - If the current node has children (found in the `children` prop), React processes each child element. If a child is a string, it creates a text node instead.
+
+                javascript
+                const appendChildren = (parentNode, children) => {
+                children.forEach(child => {
+                    let childNode;
+                    if (typeof child === 'string') {
+                    childNode = document.createTextNode(child); // Create text node for strings
+                    } else {
+                    childNode = createDOMNode(child); // Create DOM node for elements
+                    setAttributes(childNode, child.props); // Set attributes for the child
+                    appendChildren(childNode, child.props.children || []); // Process its children
+                    }
+                    parentNode.appendChild(childNode); // Append child node to parent
+                });
+                };
+
+                appendChildren(divNode, element.props.children); // Append h1 and p to div
+        
+
+        Step 4: Finalizing the Render
+
+            Finally, the constructed DOM node (the `div` with its children) is appended to the target element in the real DOM.
+
+            javascript
+            const rootElement = document.getElementById('root');
+            rootElement.appendChild(divNode); // Final step: append the divNode to the root element
+        
+
+
+    Browser APIs Used
+        document.createElement(tagName)
+        document.createTextNode(text)
+        node.setAttribute(name, value)
+        node.className
+        node.appendChild(childNode)

@@ -1,0 +1,115 @@
+Custom Hooks
+
+- Custom hooks are reusable functions in React (prefixed with use) that let you share logic across multiple components without duplicating code. They help keep your components clean and focused by abstracting complex functionality into a single hook.
+
+Code Splitting
+
+- Code splitting is the process of dividing your application into smaller pieces or bundles to optimize performance. Instead of loading all code upfront, the browser only loads the code needed for the current functionality or page.
+
+Chunking
+
+- Chunking refers to the actual smaller files (or bundles) created as a result of code splitting. These chunks are optimized, self-contained pieces of code that can be independently loaded when needed.
+
+Lazy Loading
+
+- Lazy loading is a technique to delay loading parts of your application (like components or images) until they are needed. This reduces the initial load time of the app, improving speed and performance.
+
+suspence
+
+- Suspense is a React component that wraps around lazy-loaded components to display a fallback (like a spinner) while waiting for those components to load. It enhances user experience by providing visual feedback during the loading process.
+
+suspence
+lazy(import() => path)
+fallback()
+
+Code Explanation
+lets create a simple app where:
+
+1.  A component (`About`) is lazy-loaded when the user clicks a button.
+2.  While loading the component, a `fallback` UI (like a loading spinner) is shown using `Suspense`.
+
+    code Example
+
+        import React, { Suspense, lazy, useState } from "react";
+
+        // Lazy load the About component
+        const About = lazy(() => import("./About"));
+
+        function App() {
+        const [showAbout, setShowAbout] = useState(false);
+
+        return (
+            <div>
+            <h1>Welcome to My App</h1>
+            <button onClick={() => setShowAbout(true)}>Show About Component</button>
+
+            {/* Wrap lazy-loaded components in Suspense */}
+            {showAbout && (
+                <Suspense fallback={<div>Loading...</div>}>
+                <About />
+                </Suspense>
+            )}
+            </div>
+        );
+        }
+
+        export default App;
+
+    What Happens Here
+
+    1. `React.lazy(() => import('./About'))`:
+
+    - Dynamically imports the `About` component only when it’s needed, reducing the initial bundle size.
+
+    2. `<Suspense fallback={<div>Loading...</div>}>`:
+
+    - Provides a fallback UI (`<div>Loading...</div>`) while waiting for the `About` component to load.
+
+    3. User Interaction:
+
+    - The `About` component is loaded only when the user clicks the button, and until it loads, the fallback (`Loading...`) is displayed.
+
+Here’s an explanation of the need for `Suspense`, `fallback`, and `lazy`, along with where they are imported:
+
+1. React.lazy()
+
+    - Need
+        - To dynamically load components only when they are required (lazy loading).
+        - It helps reduce the app's initial load time by splitting the code into smaller parts (chunks).
+
+    - Imported From:  
+        import { lazy } from "react";
+
+    Use Case 
+        - When a component isn’t critical to load immediately (e.g., a page or feature that a user navigates to later).
+
+    - The lazy function takes a function as its argument.
+    - The function should use import() to dynamically load the desired component file.
+    - Example:
+        const LazyComponent = lazy(() => import("./path/to/YourComponent"));
+    - import():
+        It dynamically imports the module at the specified path (./path/to/YourComponent).
+    This tells React to load YourComponent only when it's actually rendered in the UI, saving the app from loading unnecessary components upfront.
+
+2. Suspense
+
+    - Need 
+        - `React.lazy()` alone can’t handle loading states or errors. `Suspense` wraps lazy-loaded components and provides a fallback UI while waiting for the component to load.
+        - Without `Suspense`, there would be no way to show something (e.g., a spinner or "Loading...") during the loading phase.
+
+    - Imported From -  
+        import { Suspense } from "react";
+
+    - Use Case - To gracefully handle lazy-loaded components by showing a fallback while the loading happens.
+
+3. Fallback
+
+    - Need      
+        - `fallback` is a prop of `Suspense` that specifies what to display while a lazy-loaded component is being fetched.
+        - Without `fallback`, the UI might freeze or leave a blank space, resulting in a bad user experience.
+
+    - Example Fallback -  
+        <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+        </Suspense>
+

@@ -1,0 +1,251 @@
+we write code for machine and humans , first for humans and then for machines
+
+XML
+- XML is a markup language that defines rules for encoding documents in a format that is both human-readable and machine-readable. It is designed to store and transport data, allowing for a structured representation of information.
+- It has Self-descriptive tags
+
+jsx(javascript XML)
+- jsx in react is like merging of javascript and html together
+- core react is different from jsx , jsx makes it easier to write react but it is different than original react
+- jsx is html like syntex , it is not html in react or js
+- browser do not understand jsx , babel transpiles the jsx so that js engine can understand it
+- we can give class using className attribute to jsx
+- we can write jsx in parenthesis () if there are mutiple lines
+- JSX must return one element because React components cannot return multiple sibling elements directly. The entire JSX structure must be wrapped in a single parent.
+- react create object from jsx code
+
+example -> jsxHeading = <h1className="heading"> Hello </h1>
+jsx ==> React.createElement() => JS object => HTML element(render)
+
+Babel 
+- Babel is essential for React applications as it converts JSX into plain JavaScript.
+- JSX is a syntax extension that looks like HTML but isn’t understood by browsers.
+- Babel transforms <div>Hello</div> in JSX to React.createElement('div', null, 'Hello').
+- This allows React components written in JSX to run seamlessly in browsers.
+
+Transpiling 
+- Transpiling converts JSX code into JavaScript that browsers can understand.
+- For example, JSX like <h1>Hi</h1> is transpiled to React.createElement().
+- It ensures React apps can use modern features while staying browser-compatible.
+- Babel is the tool often used for transpiling JSX in React development.
+
+Props in React
+    Props (short for "properties") are a core feature of React that allows you to pass data from one component to another. They enable components to be dynamic and reusable by allowing them to accept data as input.
+
+    Key Features of Props
+        Data Passing: Props allow you to pass data from parent components to child components.
+        Read-Only: Props are immutable, meaning that a child component cannot modify the props it receives. This helps maintain a clear data flow and state management.
+        Functionality: Props can be used to pass down not just data but also functions that the child can call.
+    
+    - Parent Component Passing Props to Child Component
+        // Child Component
+        function UserProfile(props) {
+        return (
+            <div>
+            <h2>{props.name}</h2>
+            <p>Age: {props.age}</p>
+            <p>Email: {props.email}</p>
+            </div>
+        );
+        }
+
+        // Parent Component
+        function App() {
+        return (
+            <div>
+            <UserProfile name="Alice" age={30} email="alice@example.com" />
+            <UserProfile name="Bob" age={25} email="bob@example.com" />
+            </div>
+        );
+        }
+
+
+    - Passing Functions as Props
+        // Child Component
+        function Counter(props) {
+        return (
+            <div>
+            <h2>Count: {props.count}</h2>
+            <button onClick={props.increment}>Increment</button>
+            </div>
+        );
+        }
+
+        // Parent Component
+        class App extends React.Component {
+        state = {
+            count: 0,
+        };
+
+        incrementCount = () => {
+            this.setState({ count: this.state.count + 1 });
+        };
+
+        render() {
+            return (
+            <div>
+                <Counter count={this.state.count} increment={this.incrementCount} />
+            </div>
+            );
+        }
+        }
+
+
+
+React Element
+- A React Element is a plain JavaScript object that describes what you want to see on the screen.
+- They can be created using JSX (JavaScript XML) syntax or by calling React.createElement().
+example -> const heading = <h1>Heading</h1>
+
+React components are reusable pieces of UI, like building blocks for your application.
+- functional (using functions) 
+- class-based (using ES6 classes).
+
+functional component
+- react functional components just a normal javascript function which returns some piece of jsx
+- function which returns a react element
+- name of functional Component should always start with uppercase letter
+- we can use arrow function as well as normal function
+- example--> const functionComponent = () => <h1>functionComponent</h1>
+
+    const functionComponent = () => {
+        return (<h1>functionComponent</h1>)
+    }
+
+    - to call or render a functional Component
+    <functionComponent/>
+    {functionComponent()} 
+    <functionComponent></functionComponent>
+
+component composition
+- combining multiple components , composing mutiple components into one another
+
+- Use {} for multiple lines of logic and explicitly return the result.
+- Wrap JSX in () to handle multiple lines when returning JSX.
+
+- we can write javascript code or react element inside jsx inside -{}
+
+importing and exporting 
+- we use default export when we have to export a single thing
+another way to export multiple things is to use named exports - we have to use {} while importing and write exort before element or component name
+
+
+Config-Driven UI
+- Config-Driven UI is an approach where the structure and behavior of the user interface (UI) are defined using configuration files or data from APIs. Instead of hardcoding the UI, components are rendered dynamically based on this configuration, making it flexible and reusable.
+    
+    Scenario: Dynamic Form Rendering
+    Imagine you want to create a form for different purposes, like feedback or registration, without coding each one manually.
+    Configuration File (JSON):
+
+    {
+    "title": "User Registration",
+    "fields": [
+        { "type": "text", "label": "Name", "required": true },
+        { "type": "email", "label": "Email", "required": true },
+        { "type": "password", "label": "Password", "required": true },
+        { "type": "button", "label": "Register" }
+    ]
+    }
+
+Hook
+- a react hook is normal built in javascript function given by react - it is a utility function
+
+useState()
+- a react hook used in creating powerful state variables - it helps in making state of a component
+
+    syntax - const [state,useState] = useState([])
+    state - current state value
+    setState - a function to update state , when called it triggers rerendering of the component
+
+    useState() returns an array
+    const [state,useState] = useState([]) -- this is array destructuring
+    const arr = useState()
+
+    const [state,useState] = arr ;
+    const state = arr[0] ;
+    const setState = arr[1] ;
+
+    - it is all valid
+
+- when we call useState() it gives us a state variable , we receive it using array
+- example - let [listOfRestaurants] = useState() ;
+- whatever we pass to useState() acts as a default value for the state variabel - example - let [listOfRestaurants] = useState([]) ;
+- we have to import useState() as a named import
+- whever react state variables changes react rerenders the component
+
+re-rendering 
+- process of updating and re-executing component to reflect changes in UI
+
+    diff algorithm
+    - finds out difference between new virtual dom and new virtual dom --> it then updates actual dom
+
+    react fiber
+    - The React Fiber algorithm is a modern reconciliation engine introduced by React to optimize and improve the rendering process, especially for large and complex applications.
+    - Fiber is React's mechanism for determining what changes need to be made to the DOM when the application’s state or props change.
+    - A fiber is a JavaScript object that represents a React component and its state.
+    Each fiber node corresponds to a React element in the virtual DOM and contains details such as the component type, props, and state.
+
+    Reconciliation
+    - Reconciliation in React is the process by which React determines how to update the DOM efficiently in response to changes in state or props. 
+    - It involves comparing the new virtual DOM tree (created based on the updated state or props) with the previous virtual DOM tree and determining the minimal set of changes required to update the real DOM.
+
+    - In js we can do this but it requires very much code , react made it easy , react keeps UI layer in sync with data layer , as soon as data layer update UI will update, it updates by re-rendering , it does this in fast optimized way with very less code
+    react mmakes dom operations super fast
+
+    Creating Actual HTML Elements from virtual dom objects
+    
+
+ 
+Good coding practices
+- maintain good folder structure for better readablility and efficient use
+- use modular reusable code
+- store constants (file url , APIs)
+- basic structure
+    - src
+        - components
+        - utils
+
+Monolith Architecture
+- Monolith architecture is a software design where all parts of an application (like the user interface, business logic, and database) are built as a single unit. 
+- This makes it simple to develop and deploy, but scaling or making changes can be difficult because everything is tightly connected.
+
+Microservices Architecture
+- Microservices architecture breaks an application into smaller, independent services, each handling a specific function.
+- This allows for easier scaling, flexibility in technology choices, and better fault tolerance, as one service can fail without affecting the entire application. However, it can be more complex to manage due to the need for communication between multiple services.
+
+useEffect()
+- useEffect() is a React hook that allows you to perform side effects in function components. Side effects can include data fetching, DOM manipulation, setting up subscriptions, and more.
+- It takes 2 arguments - first an callback function arrow function- second is dependency array
+useEffect() is always called on inital render just once
+- if no dependency array useEffect() is called on every render
+- if there is dependency array and it is empty - useEffect() is called on inital render just once
+- if there is dependency array and it is has something - useEffect() is called every time that thing changes
+  useEffect(() => {},[count]) - useEffect() will be called whenever count changes
+  when use effect will be called
+        Empty array ([]) - Runs once on mount.
+        Single dependency ([var]) - Runs on mount and when var changes.
+        Multiple dependencies ([var1, var2]) - Runs on mount and when any of the variables change.
+        No array - Runs on every render.
+        Multiple useEffect - Separate concerns into independent effects.
+        return in useEffect - Used for cleanup to prevent memory leaks.
+        useEffect(() => {
+            const interval = setInterval(() => {
+                console.log("Interval running...");
+            }, 1000);
+
+            // Cleanup function
+            return () => {
+                clearInterval(interval);
+                console.log("Interval cleared!");
+            };
+     }, []);
+
+
+- Uses
+    Synchronization - Connects and synchronizes components with external systems (e.g., network requests, browser DOM, animations).
+    DOM Updates - Used to update elements like the document title and scroll position based on changes in component state or props.
+    Subscriptions - Sets up listeners for events (e.g., browser events, WebSocket connections) and cleans them up to avoid resource leaks.
+    Effect Cleanup - Helps prevent memory leaks by cleaning up side effects when the component unmounts or updates.
+
+conditional rendering
+- Conditional rendering in React means showing different parts of the UI based on certain conditions. For example, you can display a message if a user is logged in and a login button if they are not.

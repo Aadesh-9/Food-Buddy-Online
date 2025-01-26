@@ -1,0 +1,32 @@
+1. react-router-dom 
+This is a popular library for routing in React applications. It allows you to create navigation between different pages or components without reloading the page, making your app feel fast and responsive. It supports features like dynamic routing, nested routes, and programmatic navigation.
+
+2. createBrowserRouter 
+This is a function from `react-router-dom` used to define all your app’s routes in one place. It uses the browser's history API to manage navigation. For example, you can create a router object with paths like `/home` or `/profile/:id`, specifying which component should load for each route.
+
+3. RouterProvider 
+This component is used to provide the router configuration (created using `createBrowserRouter`) to your entire React application. It essentially makes routing functionality available across your app and ensures the correct components render based on the current URL.
+
+4. Outlet 
+`Outlet` is used in nested routing. When you have a parent route that renders common components (like a navigation bar) and child routes for specific content, `Outlet` acts as a placeholder where the content of the child route will be displayed. For example, in a dashboard layout, the header and sidebar are part of the parent, and the specific page (like `Profile` or `Settings`) is rendered in the `Outlet`.
+
+5. childrenRoutes (Child Routes) 
+Child routes let you define a hierarchy of routes where a parent route can have multiple children. Each child route is nested under the parent route and inherits its layout or structure. For example, `/dashboard` can be a parent route with child routes like `/dashboard/profile` and `/dashboard/settings`.
+
+6. useError (useErrorHandler) 
+This is a feature or hook used to manage errors in routes. If there’s an error while fetching data or rendering a route, you can use this to display a custom error page or message. It ensures a better user experience by handling issues gracefully rather than crashing the app.
+
+7. useParams 
+This is a hook to access route parameters, which are dynamic parts of a URL. For instance, in a route like `/user/:id`, the `id` is dynamic. Using `useParams`, you can extract this `id` value and use it in your component, like fetching details of a specific user.
+
+8. Dynamic Routes 
+Dynamic routes are routes with placeholders in their paths that can change based on the URL. For example, `/product/:productId` is a dynamic route where `:productId` can be any product ID. These routes are powerful for creating pages like user profiles, product details, or any other resource-specific content.
+
+css styling ways
+    normal css
+    sass
+    scss
+    material ui
+    chakra ui
+    ant design
+    tailwind css

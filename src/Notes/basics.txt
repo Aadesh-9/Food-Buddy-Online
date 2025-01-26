@@ -1,0 +1,202 @@
+Emmit
+- It is a popular toolkit used in code editors to improve coding efficiency, especially for writing HTML and CSS. Emmet provides powerful shortcuts that allow you to generate large amounts of code quickly with simple abbreviations.
+
+React
+- react is a JavaScript library used for building fast, scalable, and user-friendly user interfaces for single-page applications
+- created and maintained by Meta
+- react has efficient rendering techniques, reusable components, and active community support.
+
+React Features
+1. Component-Based Architecture - React encourages breaking the UI into small, reusable components.
+Each component can have its own logic and state, making the application modular and maintainable.
+2. Virtual DOM - Instead of updating the real DOM directly, React uses a lightweight copy called the Virtual DOM.
+When changes are made, React calculates the minimal updates required and applies them efficiently to the real DOM.
+3. Unidirectional Data Flow- React follows a one-way data-binding approach, where data flows from parent components to child components through props. This makes data handling more predictable and debugging easier.
+4. JSX (JavaScript XML) - JSX is a syntax extension that allows developers to write HTML-like code within JavaScript.
+It makes the code easier to read and write.
+
+- react can be applied to small portion of page - in header only, footer only or sidebar only
+- we can achieve everything React does using plain HTML, CSS, and JavaScript, but React makes certain tasks more efficient, scalable, and developer-friendly, especially for complex applications.
+- react and other frameworks help in keeping data layer and UI layer together , as soon as data layer changes UI should get updated
+- react keeps UI layer in sync with data layer , as soon as data layer update UI will update, it updates by re-rendering , it does this in fast optimized way with very less code
+- react mmakes dom operations super fast - thats why it is fast
+- react and other framework tries to merge html and javascript files so that we can do same thing in one file
+
+
+Virtual dom
+- The Virtual DOM is an in-memory representation of the actual DOM (Document Object Model). It allows React to optimize updates and rendering by minimizing the number of direct manipulations to the real DOM
+- virtual dom is not an actual dom - actual dom is the html tags
+- virtual dom is a representaion of actual dom
+- virtual DOM in React is  an object —a JavaScript object that represents the UI's structure and state. 
+
+One way binding
+- In one-way data binding, the flow of data is unidirectional, typically moving from the data source (model) to the UI (view). The user interacts with the view, and changes to the view are explicitly handled using event listeners to update the model.
+- In React, one-way binding means that data flows in a single direction, from the parent component (state/props) to the child component or from the component’s state to the UI. Any changes in the data are managed explicitly by updating the state.
+- To update the UI, the state must be explicitly modified using setState (class components) or useState (functional components).
+
+Two way data binding
+- In two-way data binding, data flows in both directions. Any changes made in the model are automatically reflected in the view, and vice versa.
+- In Angular, two-way data binding synchronizes data between the component and the template. Any changes made to the UI (view) automatically update the component’s data (model), and vice versa.
+
+CDN - Content delivery network
+- A Content Delivery Network (CDN) is a system of distributed servers that deliver web content and resources, such as JavaScript libraries, CSS files, images, and videos, to users based on their geographic location
+- Faster content delivery by serving files from the nearest server.
+
+crossorigin 
+- When using resources from a domain different from your website's origin, the browser treats the request as a cross-origin request. 
+- Browsers enforce a same-origin policy for security.
+- It is needed to prevent CORS errors when fetching resources.
+
+Tree shaking
+- Tree shaking is a process used in modern JavaScript development to eliminate unused code from a project during the build process. It is primarily implemented by JavaScript bundlers such as Webpack, Rollup, or Vite to optimize the final output by reducing its size and improving performance.
+- Dead Code Elimination-  identifying unused exports, the bundler removes them
+
+ways of using react -
+1. Using React from a CDN
+- Simpler Setup
+- No Local Dependencies - reduce size of project
+- No Development Tools
+- Not Suitable for Large Projects
+- Lack of Control- You rely on the CDN's availability. If the CDN is down, your app won't load. 
+- No tree shaking 
+
+2. Installing React 
+- Better Control and Versioning - You can lock React to a specific version using a package.json file, ensuring consistency across all environments.
+- Tree Shaking and Optimization
+- Development Environment - Local installation supports advanced tools like HMR
+- Offline Development - You can work offline because React is installed locally.
+- Initial Setup Complexity  
+- Larger Project Folder - Dependencies can significantly increase the size of your node_modules directory.
+
+React files
+- React is split into different packages like React and ReactDOM to separate concerns and keep the library modular. Each package serves a distinct purpose, making it easier to maintain and use React in different environments or projects.
+1. React (react) - The core library that provides the building blocks for React applications.
+2. ReactDOM (react-dom) - Handles rendering React components into the web browser's DOM.
+3. ReactDOM/Server (react-dom/server) - Supports server-side rendering (SSR) for React applications, enabling React apps to render HTML on the server before sending it to the client.
+4. React Native (react-native) - Handles rendering React components in a native environment, such as iOS and Android apps.
+5. React Test Renderer (react-test-renderer) - Allows you to render React components for testing purposes without relying on a DOM.
+6. React Developer Tools (react-devtools) - A debugging tool for inspecting the React component tree in your application.
+
+
+React.createElement
+- React.createElement - Creates React elements, the building blocks of the virtual DOM.
+- React.createElement is a core API in React used to create React elements, which are plain JavaScript objects that describe what should appear on the screen.
+- React.createElement requires 3 paramters -- type of element, an object containing properties(attributes) ,it can be empty , children(optional) - The content inside the element. This can be text, other elements, or an array of elements.
+-  when there are multiple children , enclose them in an array - React.createElement(type, [props], [children1,children2,..]);
+
+ReactDOM.createRoot
+- ReactDOM.createRoot - Mounts and renders your React application into the actual DOM while enabling new React 18 features.
+- ReactDOM.createRoot is part of React's new root API introduced in React 18. It is used to create a root for rendering your React application into the DOM. This replaces the older ReactDOM.render method.
+- ReactDOM.createRoot - creates root element in which react components will be rendered - we have to specify root in which react will be insisted
+
+root.render()
+- It is used to render a React element or component into the specified DOM node. You can render a single element, a component, or a tree of components.
+
+React Element
+- A React Element is a plain JavaScript object that describes what you want to see on the screen.
+- They can be created using JSX (JavaScript XML) syntax or by calling React.createElement().
+
+npm (Node Package Manager)
+- npm is a package manager for JavaScript, primarily used for managing packages and dependencies in Node.js applications.
+- Packages allow developers to reuse code written by others, saving time and effort in development.
+- npm (Node Package Manager) repository is a vast collection of open-source packages and modules for JavaScript.
+
+package.json
+- It is a configuration for npm , it keeps track of what version of package is installed into our system
+- package.json is a configuration file in the root directory of a Node.js project. It defines the project, its dependencies, scripts, and other metadata.
+- package-lock.json locks specific versions for consistency, it is generated based on the package.json file.
+
+package-lock.json
+- package-lock.json is automatically generated when you install a package using npm. It records the exact version of every installed package, including its dependencies.
+- It locks the exact versions of all dependencies (and their sub-dependencies) used in your project.
+This ensures that everyone working on the project installs the same versions, avoiding "works on my machine" issues.
+- While package.json lists only the direct dependencies of your project, package-lock.json includes the full dependency tree (dependencies of dependencies). This makes it much more detailed.
+- If you deploy your project to production or share it with collaborators, package-lock.json ensures that all environments have the exact same setup.
+
+ The package.json and package-lock.json files are essential for managing dependencies .It guarantees how those dependencies are installed, avoiding version conflicts, improving security
+
+Regular Dependencies
+- Regular dependencies are packages that are essential for the application to run in production.
+
+Development Dependencies
+- Development dependencies are packages that are only needed during the development phase of a project. These packages are typically used for testing, building, or other development tasks but are not required for the application to run in production.
+- it is specified by -D before package name
+
+Parcle
+- Parcel is a fast, zero-configuration web application bundler that allows developers to bundle their JavaScript applications
+
+Node Modules
+- When you create a Node.js project and install dependencies, the dependencies are stored in a folder called node_modules. This folder contains Source Code of Installed Packages, all the libraries or modules your project directly depends on, as well as their dependencies.
+- It can be regenerated using npm install command
+
+Transitive Dependency
+- A transitive dependency is a dependency that your project does not explicitly specify but is required by one of the libraries you depend on. For example -
+Suppose your project has a direct dependency on Library A.
+Library A has a dependency on Library B.
+Library B has a dependency on Library C.
+
+package version
+- MAJOR - Incremented for incompatible API changes.
+- MINOR - Incremented for backward-compatible new features.
+- PATCH - Incremented for backward-compatible bug fixes.
+- Example - 1.2.3 indicates major version 1, minor version 2, and patch version 3
+
+Tilde (~)
+- When you prefix a version number with a tilde, it allows updates for patch versions (the last number) while keeping the major and minor versions fixed.
+
+Caret (^)
+- When you prefix a version number with a caret, it allows updates for minor and patch versions while keeping the major version fixed.
+
+npx - executing a package
+
+to run project use command - npx parcel index.html(first starting file of project)
+shorcut - specify in script in package.json ,  "script[ "start" : "npx parcel index.html",
+"build" : "npx build index.html" ]
+then can you can use npm run start or npm start to start the project and npm run build to build the project
+
+| Feature                 | Development Code                        | Production-Ready Code (build)              |
+|-------------------------|-----------------------------------------|-------------------------------------|
+| Size                    | Larger (unoptimized)                    | Minified, smaller                   |
+| Browser Compatibility   | Uses modern JavaScript (ES6+)           | Transpiled to ES5 (older browsers)  |
+| Debugging               | Debugging tools enabled                 | Debugging tools removed             |
+| Environment Variables   | Development configs (e.g., `localhost`) | Live configs (e.g., production API) |
+| Security                | May expose sensitive info               | Secure practices implemented        |
+| Performance             | Lower performance                       | Highly optimized                    |
+
+noraml javascript does not have imports and exports
+
+What is type="module" in HTML?
+- The type="module" attribute on a <script> tag tells the browser that the JavaScript file is an ES Module.
+ES Modules (.mjs or .js) support modern JavaScript features like import and export directly in the browser without a bundler.
+
+Browserslist
+- Browserslist is a tool used in web development to specify the range of browsers that your project should support.
+
+dist
+- The dist folder contains the final build output of your project.
+- It contains - Optimized Code , bundled files , static assets (images)
+
+.parcel-cache Folder
+- The .parcel-cache folder is used by Parcel for caching purposes during development and builds
+- Avoids Re-Bundling - Files that haven't changed since the last build are not re-bundled, saving time.
+
+A bundler is a tool that takes multiple files (like JavaScript, CSS, images) and combines them into a single file (or fewer files) for efficient use in web applications.
+
+parcel features  
+1. Dev Build - Quickly builds your app during development for testing purposes.
+2. Local Server - Hosts your app locally so you can test it in the browser.
+3. HMR (Hot Module Replacement) - Updates parts of your app instantly without refreshing the page.
+4. File Watching Algorithm (written in C++) - Tracks changes in your files for quick updates during development.
+5. Caching (Faster Builds) - Speeds up rebuilds by storing processed files and reusing them.
+6. Image Optimization - Reduces image size for faster loading without losing quality.
+7. Minification - Shrinks code (e.g., removing spaces) to make it smaller and faster.
+8. Bundling - Combines multiple files into one or fewer files for better performance.
+9. Compress - Further reduces file sizes using techniques like gzip.
+10. Consistent Hashing - Ensures reliable cache-busting by generating unique file names.
+11. Code Splitting - Breaks your app into smaller bundles, loading only what's needed.
+12. Differential Bundling - Creates separate bundles for modern and older browsers for compatibility.
+13. Diagnostic - Identifies and reports issues in your code.
+14. Error Handling - Detects and manages errors to prevent crashes.
+15. HTTPS - Provides secure connections for local development.
+16. Tree Shaking - Removes unused code from your project to reduce size.
+17. Different Dev and Prod Bundles - Creates optimized bundles for production and simpler ones for development.

@@ -1,0 +1,197 @@
+class based components
+
+- a class which extends react.component class which has render method which returns some piece of jsx
+- we can pass props to classes but while importing we have to call 2 methods constructor(props) and inside that we have to call super(props) method , then we can acess props
+- to use this.props.name to acces passed name as a prop
+- loading a class based component means we are creating instance of a class
+
+render() method
+
+constructor
+super
+
+- method in class based components which returns some piece of jsx and used to display things on screen
+
+react.component class
+
+state management
+
+- earlier there were no state variables we used to define states in this.state{} object which consist of all the state variables ,
+- example ---> this.state({ count : 1 })
+- Updating State
+- The setState() method is used to update the state.
+- React automatically re-renders the component when the state changes.
+- setState() method can be used to update multiple state variables at one time or multiple times , it only updates those state varaibles which are defined in setState() method
+- we can acces state using this.state.stateVariableName
+
+Lifecycle of react class based components
+
+- lifecycle methods are special functions that run at different stages of a component's life
+
+1.  mounting phase
+    This happens when the component is displayed for the first time.
+
+            constructor():
+            - Runs at the start to initialize the component. Use it to set the initial state or bind event handlers.
+
+            static getDerivedStateFromProps():
+            - Updates the state before rendering if the props have changed. It's rarely used.
+
+            props change when the parent component passes new values to the child.
+
+    Changing props is controlled by the parent, not the child.
+    React automatically triggers a re-render when props change, allowing the child to reflect the updated values.
+
+            render():
+            - The required method that defines what the UI should look like. This returns the JSX that gets displayed.
+
+            componentDidMount():
+            - Runs after the component is added to the DOM. Great for fetching data (making api calls) or setting up subscriptions.
+
+            when there are nested components (parent child) the sequence of these functions will be
+            parent constructor called
+            parent render called
+            child constructor called
+            child render called
+            child componentDidMount() called
+            parent componentDidMount() called
+
+            we render a component and then make api calls and fill the component will the data , we use componentDidMount() and useEffect() for that
+            basic flow
+            rendering phase
+                constructor
+                render
+            commit phase
+                updates DOM
+                componentDidMount
+
+            most expensive operation in component life cycle is dom manipulation , so react batch the rendering phase and batch the commit phase
+
+            Why React Keeps Rendering Together?
+                React follows a top-down rendering model for efficiency and consistency. Here’s why:
+
+                Virtual DOM Tree Construction
+                - During the render phase, React builds a virtual DOM representation of the entire component tree.
+                By doing this in a single pass, React avoids multiple renders and ensures that the entire tree is consistent before updating the actual DOM.
+
+                Batch Updates
+                - React batches state and props updates together to minimize performance overhead.
+                Instead of re-rendering and re-updating the DOM for every single component, React performs these updates once per render cycle.
+                This approach avoids layout thrashing and excessive reflows/repaints in the browser.
+
+            Why React Batches DOM Updates?
+                React batches DOM updates for performance and consistency reasons:
+
+                Minimize Expensive DOM Operations
+                - Updating the DOM is slow compared to in-memory operations (virtual DOM).
+                React minimizes interactions with the actual DOM by batching updates and applying them efficiently.
+                Avoid Intermediate States:
+
+                - By batching updates, React ensures that the DOM reflects the final state of the app at any given point.
+                Without batching, the DOM would go through unnecessary intermediate states, leading to bugs or inconsistencies.
+                Improve Rendering Performance:
+
+                Batch updates allow React to apply optimizations like diffing (comparing the previous and current virtual DOM) and reconciling (updating only the necessary parts of the DOM).
+
+
+            static getDerivedStateFromProps():
+
+            - This lifecycle method is used to update the state of a component when its props change.
+            - It is a static method, which means it does not have access to this or the component instance. Instead, it only receives two parameters -
+                props - The new props being passed to the component.
+                state - The current state of the component.
+
+            - props change when the parent component passes new values to the child.
+            - Changing props is controlled by the parent, not the child.
+            - React automatically triggers a re-render when props change, allowing the child to reflect the updated values.
+
+            example -->
+            class Parent extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                    initialCount: 5,
+                    };
+                }
+
+                changeCount = () => {
+                    this.setState({ initialCount: 10 }); // Update state
+                };
+
+                render() {
+                    return (
+                    <div>
+                        <Counter initialCount={this.state.initialCount} /> {/* Pass as props */}
+                        <button onClick={this.changeCount}>Change Props</button>
+                    </div>
+                    );
+                }
+            }
+
+            class Counter extends React.Component {
+                static getDerivedStateFromProps(props, state) {
+                    if (props.initialCount !== state.count) {
+                        return { count: props.initialCount }; // Sync state with props
+                    }
+                    return null;
+                }
+
+                constructor(props) {
+                    super(props);
+                    this.state = { count: props.initialCount }; // Set initial state
+                }
+
+                render() {
+                    return <p>Count: {this.state.count}</p>;
+                }
+            }
+
+            // Render
+            ReactDOM.render(<Parent />, document.getElementById("root"));
+
+    
+
+2. updating phase
+    - after mounting phase react render dom with data and then updating phase starts
+    - updating phase happens as below
+        render
+        react updates dom  - with updated state values
+        componentDidUpdate()
+    
+    it trigger when 
+        
+        New Props
+        - Props are passed from a parent to a child component.
+        - Changes in props cause the child to re-render if the new props affect the output.
+        - Props cannot be modified by the child—they are read-only.
+        
+        setState
+        - Updates the state of the component.
+        - Automatically triggers a re-render to reflect the new state.
+        - Best for updating state in response to user actions or other events.
+        
+        forceUpdate:
+        - Forces a component to re-render, even if props and state haven’t changed.
+        - Rarely needed and should be used sparingly (e.g., for mutable objects or external libraries).
+
+3. unmounting phase
+    - componentWillUnmount is a React lifecycle method that gets called right before a component is removed from the DOM. It’s like a "cleanup" phase when a component is about to go away.
+    uses
+        - Clean up resources like timers, intervals, or subscriptions.
+        - Stop background tasks (e.g., network requests, event listeners, or WebSocket connections).
+        - Avoid memory leaks by cleaning up anything the component created.
+
+
+basic flow
+    1. mounting phase
+        constructor
+        render with inital data
+        componentDidMount
+            api calls
+            setState
+    2. updating phase
+        render
+        updating of dom with updated data
+            componentWillUnmount
+
+- never compare lifecycle methods with functional components
