@@ -4,6 +4,7 @@ import { RESTAURANT_API } from "../utils/constants";
 import RestaurantCards from "./RestaurantsCards";
 import Shimmer from "../utils/shimmerUI/Shimmer";
 import { MOCK_DATA } from "../utils/constants";
+import Footer from "./Footer";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -50,11 +51,11 @@ const Body = () => {
       <Shimmer />
     </>
   ) : (
-    <div className="body">
+    <div className="mt-[2%] h-full">
       <div className="search-container">
         <input
           type="text"
-          className="search-space"
+          className="w-[340px] ml-[35%] p-[6px] my-4 border-1 border-black border-solid rounded-sm bg-gray-500 placeholder:text-black"
           placeholder="Search Food Buddy Online"
           value={searchText}
           onChange={(e) => {
@@ -70,7 +71,7 @@ const Body = () => {
             });
             setFilteredListOfRestaurants(filteredList);
           }}
-          className="search-button"
+          className="p-[6px]  mx-1 cursor-pointer border-1 border-black border-solid rounded-sm bg-gray-500 "
         >
           Search
         </button>
@@ -88,11 +89,11 @@ const Body = () => {
 
           setFilteredListOfRestaurants(filteredList);
         }}
-        className="top-rated-restaurants-button"
+        className="p-[6px]  ml-4 my-4 cursor-pointer border-1 border-black border-solid rounded-sm bg-gray-500"
       >
         Top Rated Restaurants
       </button>
-      <div className="res-cards-container">
+      <div className="flex flex-wrap mt-1.5">
         {filteredListOfRestaurants.map((restaurant) => (
           <Link
             className="Link-tag"
@@ -107,10 +108,11 @@ const Body = () => {
         onClick={() => {
           handleLoadMore();
         }}
-        className="more-res-button"
+        className="p-[6px] my-6  mx-2 cursor-pointer border-1 border-black border-solid rounded-sm bg-gray-500"
       >
         Load more Restaurants
       </button>
+      <Footer />
     </div>
   );
 };

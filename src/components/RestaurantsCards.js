@@ -11,16 +11,16 @@ const RestaurantCards = (props) => {
       ? cloudinaryImageId.substring(0, jpgIndex + 4)
       : cloudinaryImageId;
   return (
-    <div className="card">
+    <div className="mx-2 w-[200px]  shadow-lg hover:border-1 border-black border-solid text-black">
       <img
-        className="res-logo"
+        className="mx-1 my-2 w-[192px] h-[185px] p-2 "
         src={RESTAURANT_IMAGE_URL + sanitizedCloudinaryImageId}
       />
 
-      <p>{name}</p>
-      <p>{avgRating}</p>
-      <p>{costForTwo}</p>
-      <p>{cuisines.join(" , ")}</p>
+      <p className="ml-3 p-2 font-bold">{name}</p>
+      <p className="p-1 ml-3 ">{"⭐ " + avgRating}</p>
+      <p className="p-1 ml-3">{costForTwo}</p>
+      <p className="p-1 ml-3">{cuisines.join(" , ")}</p>
     </div>
   );
 };
