@@ -31,3 +31,9 @@ export const MOCK_DATA = [
 
 export const MENU_ITEM_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
+
+export const VEG_LOGO =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/1200px-Indian-vegetarian-mark.svg.png";
+
+export const NON_VEG_LOGO =
+  "https://thumbs.dreamstime.com/b/non-vegetarian-sign-veg-logo-symbol-red-color-food-grade-circle-312777489.jpg";

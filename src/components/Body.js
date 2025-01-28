@@ -55,8 +55,8 @@ const Body = () => {
       <div className="search-container">
         <input
           type="text"
-          className="w-[340px] ml-[35%] p-[6px] my-4 border-1 border-black border-solid rounded-sm bg-gray-500 placeholder:text-black"
-          placeholder="Search Food Buddy Online"
+          className="w-[340px] ml-[35%] p-[6px] my-4 border-1 border-black border-solid rounded-sm bg-gray-500  placeholder:text-black"
+          placeholder="Search Food-Buddy-Online"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
@@ -71,7 +71,7 @@ const Body = () => {
             });
             setFilteredListOfRestaurants(filteredList);
           }}
-          className="p-[6px]  mx-1 cursor-pointer border-1 border-black border-solid rounded-sm bg-gray-500 "
+          className="p-[6px]  mx-[6px] cursor-pointer border-1 border-black border-solid rounded-sm bg-gray-500 "
         >
           Search
         </button>
