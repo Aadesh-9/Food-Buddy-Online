@@ -16,23 +16,16 @@ const RestaurantMenu = () => {
   const resMenu = useGetRestaurantMenu(resId);
 
   if (resMenu == null) return <Shimmer />;
+
   let itemCards1 =
     resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-      ?.card.itemCards;
-  if (itemCards1 === undefined)
-    itemCards1 =
-      resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
-        ?.card?.card.itemCards;
-
-  if (itemCards1 === undefined)
-    itemCards1 =
-      resMenu?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
-        ?.card?.card.itemCards;
-
-  if (itemCards1 === undefined)
-    itemCards1 =
-      resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
-        ?.card?.card?.categories[0].itemCards;
+      ?.card.itemCards ||
+    resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+      ?.card.itemCards ||
+    resMenu?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+      ?.card.itemCards ||
+    resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+      ?.card?.categories[0].itemCards;
 
   const itemCards2 =
     resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card
@@ -47,7 +40,6 @@ const RestaurantMenu = () => {
   const itemCards4 =
     resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card
       ?.card?.itemCards;
-
   const itemCards5 =
     resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]?.card
       ?.card?.itemCards;
@@ -63,7 +55,6 @@ const RestaurantMenu = () => {
   const title2 =
     resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card
       ?.card?.title;
-
   const title3 =
     resMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
       ?.card?.title;
