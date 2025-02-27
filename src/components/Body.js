@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { RESTAURANT_API } from "../utils/constants";
-import RestaurantCards from "./RestaurantsCards";
+import RestaurantCards, { withPromotedLabel } from "./RestaurantsCards";
 import Shimmer from "../utils/shimmerUI/Shimmer";
 import { MOCK_DATA } from "../utils/constants";
 import Footer from "./Footer";
+import UserContext from "../utils/context/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -16,6 +17,10 @@ const Body = () => {
   const [count, setCount] = useState(0);
 
   const mockData = MOCK_DATA;
+
+  promotedRestaurants = withPromotedLabel(RestaurantCards);
+
+  // const { loggedInUser, setUserName } = useContext(UserContext);
 
   useEffect(() => {
     fetchData();
@@ -75,6 +80,16 @@ const Body = () => {
         >
           Search
         </button>
+        {/* <div>
+          <label>UserName : </label>
+          <input
+            type="text"
+            className="m-2 p-2 border-1 border-black border-solid"
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          />
+        </div> */}
       </div>
       <button
         onClick={() => {
@@ -100,6 +115,11 @@ const Body = () => {
             key={restaurant.info.id}
             to={"restaurants/" + restaurant.info.id}
           >
+            {/* {restaurant.data.promoted ? (
+              <promotedRestaurants resData={restaurant} />
+            ) : (
+              <RestaurantCards resData={restaurant} />
+            )} */}
             <RestaurantCards resData={restaurant} />
           </Link>
         ))}

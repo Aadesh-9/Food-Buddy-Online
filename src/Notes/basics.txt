@@ -8,12 +8,18 @@ React
 
 React Features
 1. Component-Based Architecture - React encourages breaking the UI into small, reusable components.
-Each component can have its own logic and state, making the application modular and maintainable.
+    Each component can have its own logic and state, making the application modular and maintainable.
 2. Virtual DOM - Instead of updating the real DOM directly, React uses a lightweight copy called the Virtual DOM.
-When changes are made, React calculates the minimal updates required and applies them efficiently to the real DOM.
-3. Unidirectional Data Flow- React follows a one-way data-binding approach, where data flows from parent components to child components through props. This makes data handling more predictable and debugging easier.
+    When changes are made, React calculates the minimal updates required and applies them efficiently to the real DOM.
+3. Unidirectional Data Flow- React follows a one-way data-binding approach, where data flows from parent components to child components  through props. This makes data handling more predictable and debugging easier.
 4. JSX (JavaScript XML) - JSX is a syntax extension that allows developers to write HTML-like code within JavaScript.
-It makes the code easier to read and write.
+    It makes the code easier to read and write.
+5. State Management
+    Components have their own local state.
+    External libraries like Redux, Context API, or Zustand can manage global state.
+6. React Router
+    Handles navigation in single-page applications (SPAs).
+    Enables dynamic routing without page reloads.
 
 - react can be applied to small portion of page - in header only, footer only or sidebar only
 - we can achieve everything React does using plain HTML, CSS, and JavaScript, but React makes certain tasks more efficient, scalable, and developer-friendly, especially for complex applications.
@@ -68,7 +74,7 @@ ways of using react -
 - Initial Setup Complexity  
 - Larger Project Folder - Dependencies can significantly increase the size of your node_modules directory.
 
-React files
+React packages
 - React is split into different packages like React and ReactDOM to separate concerns and keep the library modular. Each package serves a distinct purpose, making it easier to maintain and use React in different environments or projects.
 1. React (react) - The core library that provides the building blocks for React applications.
 2. ReactDOM (react-dom) - Handles rendering React components into the web browser's DOM.
