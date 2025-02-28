@@ -1,0 +1,155 @@
+# Higher Order Component (HOC) → Function  
+    A Higher Order Component is a function that takes a component as an argument and returns an enhanced version of that component. It is mainly used for code reuse, logic abstraction, and conditional rendering.  
+
+    Returns - A new enhanced component.  
+    Requires - A component as an argument.  
+    Purpose - To share common functionality across multiple components without modifying them directly.  
+
+    - Example
+    jsx
+    const withLogger = (WrappedComponent) => {
+    return (props) => {
+        console.log("Component is rendering with props:", props);
+        return <WrappedComponent {...props} />;
+    };
+    };
+
+    const MyComponent = (props) => <h1>Hello, {props.name}</h1>;
+    const EnhancedComponent = withLogger(MyComponent);
+
+    // Usage
+    <EnhancedComponent name="John" />;
+
+
+
+
+# Lifting the State Up → Pattern  
+    Lifting the state up means moving state from child components to a common parent so that multiple children can share the same state. This approach avoids duplicate state and makes state management more predictable.  
+
+    Returns - A shared state in the parent component.  
+    Requires - The state to be stored in the parent and passed as props to children.  
+    Purpose - To centralize state management and avoid inconsistent data between sibling components.  
+
+    - Example
+    jsx
+    const Parent = () => {
+    const [count, setCount] = React.useState(0);
+
+    return <Child count={count} increment={() => setCount(count + 1)} />;
+    };
+
+    const Child = ({ count, increment }) => (
+    <div>
+        <p>Count: {count}</p>
+        <button onClick={increment}>Increase</button>
+    </div>
+    );
+
+
+
+
+# Props Drilling → Pattern  
+    Props drilling occurs when data needs to be passed through multiple levels of components via props, even if intermediate components do not need the data. This can make the code harder to maintain and refactor.  
+
+    Returns - Data passed through multiple component levels.  
+    Requires - Props to be manually passed down each level.  
+    Purpose - To transfer data from a parent to deeply nested child components when `useContext()` or state management is not used.  
+
+    - Example
+    jsx
+    const GrandParent = () => {
+    const message = "Hello from GrandParent!";
+    return <Parent message={message} />;
+    };
+
+    const Parent = ({ message }) => <Child message={message} />;
+
+    const Child = ({ message }) => <p>{message}</p>;
+
+
+
+
+# useContext() → Hook  
+    The useContext hook provides a way to access values from a context without using props drilling. Instead of manually passing props through multiple components, `useContext()` allows any component inside the provider to directly access the context value.  
+
+    Returns - The current value of the context.  
+    Requires - A context object created using `createContext()`.  
+    Purpose - To manage global state and avoid prop drilling.  
+
+    - Example
+    jsx
+    const MyContext = React.createContext();
+
+    const Component = () => {
+    const value = React.useContext(MyContext);
+    return <p>Value: {value}</p>;
+    };
+
+    const App = () => (
+    <MyContext.Provider value="Hello">
+        <Component />
+    </MyContext.Provider>
+    );
+
+
+
+
+# createContext() → Function  
+    The createContext function is used to create a new context object, which allows components to share state without passing props manually. It returns a context object with two properties: `Provider` and `Consumer`.  
+
+    Returns - A context object containing `Provider` and `Consumer`.  
+    Requires - An optional initial value.  
+    Purpose - To create a shared state that can be accessed across multiple components.  
+
+    - Example
+    jsx
+    const MyContext = React.createContext("default value");
+
+
+
+
+# createContext.Consumer → Component  
+    The Consumer component is used to subscribe to context values. It is mainly used in class-based components, but it has been largely replaced by the `useContext()` hook in functional components.  
+
+    Returns - A function that receives the current context value.  
+    Requires - A function inside `<Consumer>` to access the context value.  
+    Purpose - To provide a way for class components to consume context values.  
+
+    - Example
+    jsx
+    const MyContext = React.createContext();
+
+    const Component = () => (
+    <MyContext.Consumer>
+        {(value) => <p>Value: {value}</p>}
+    </MyContext.Consumer>
+    );
+
+    const App = () => (
+    <MyContext.Provider value="Hello">
+        <Component />
+    </MyContext.Provider>
+    );
+
+
+
+
+# Context.Provider → Component  
+    The Provider component is used to wrap components that need access to the context. It allows any nested component to consume the provided value.  
+
+    Returns - A provider that supplies context values to child components.  
+    Requires - A `value` prop to define what will be shared across components.  
+    Purpose - To make state available to all components inside the provider without passing props manually.  
+
+    - Example 
+    jsx
+    const MyContext = React.createContext();
+
+    const App = () => (
+    <MyContext.Provider value="Hello">
+        <Component />
+    </MyContext.Provider>
+    );
+
+
+
