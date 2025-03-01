@@ -1,0 +1,45 @@
+redux store
+    big whole object 
+    it is kept in global central place
+
+slices
+    small parts of redux store
+    to keep data separate , we make logical paritions , they are slices
+    example - cartSlice,userSlice,darkthemeSlice
+    we cannot directly modify cart slice
+    how to write data
+        we have to dispatch an action
+        when we dispatch an action it calls a function (reducer function)
+        the function can modify the slice of redux store
+
+    how to read data from slice
+        we will use selector to read data from store
+        and the selector will modify the component
+        when we use selector it is knows as subscribing the the store
+        subscribing means to be in sync with store
+        if the data in slice changes it updates the component
+
+configureStore - redux-toolkit
+    reducers of appStore for different slices
+
+
+slice
+    name,
+    initial state
+    reducers
+    state
+    actions
+    action.payload
+Provider - react-redux
+    takes store as a prop
+    <Provider>App</Provider>
+
+useSelector
+dispatch
+useDispatch()
+
+onClick={handleAddItem}
+onClick={() =>{
+    handleAddItem(item)
+}}
+onClick={handleAddItem(item)}
