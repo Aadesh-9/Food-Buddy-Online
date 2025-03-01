@@ -53,11 +53,4 @@ const RestaurantMenuCard = (info) => {
   );
 };
 
-//   const description = props?.menuData?.card?.info?.description || "";
-//   const rating =
-//     props?.menuData?.card?.info?.ratings?.aggregatedRating.rating || "";
-//   const ratingCountV2 =
-//     props?.menuData?.card?.info?.ratings?.aggregatedRating.ratingCountV2 || "";
-//   return (
-
 export default RestaurantMenuCard;
